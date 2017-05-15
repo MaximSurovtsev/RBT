@@ -35,7 +35,11 @@ public:
 	{
 		return root;
 	}
-
+	
+	Node<T>* _NIL()const
+	{
+		return NIL;
+	}
 
 	void left_rotate(Node<T>* current)
 	{

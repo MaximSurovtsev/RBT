@@ -3,6 +3,7 @@
 const bool black = 1;
 const bool red = 0;
 
+
 template<typename T> struct Node
 {
 	T value;

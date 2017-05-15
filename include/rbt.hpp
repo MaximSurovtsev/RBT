@@ -26,9 +26,9 @@ public:
 		root = NIL;
 	}
 
-	bool _color()const
-	{
-		return color;
+	bool _color(const T& value)const
+	{	
+		return search(value)->color;
 	}
 
 	Node<T>* _root()const

@@ -4,7 +4,7 @@
 SCENARIO ("init", "[init]")
 {
   RedBlackTree<int> test;
-  REQUIRE(test.root_() == test._NIL());
+  REQUIRE(test._root() == test._NIL());
 }
 
 SCENARIO("insert", "[init]")

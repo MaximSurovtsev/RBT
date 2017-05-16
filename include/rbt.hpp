@@ -48,6 +48,8 @@ public:
 		current->right = temp->left;
 		if (temp->left != NIL)
 			temp->left->parent = current;
+		if (temp != NIL)
+			temp->parent = current->parent;
 		if (current->parent != NIL)
 		{
 			if (current == current->parent->left)
@@ -148,6 +150,11 @@ public:
 
 	void insert(const T& added)
 	{
+		if (search(added))
+		{
+			std::cout << "This value's already added in the tree\n";
+			return;
+		}
 		Node<T>* daughter = new Node<T>;
 		daughter->value = added;
 		daughter->color = red;
